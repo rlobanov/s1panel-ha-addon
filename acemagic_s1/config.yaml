@@ -1,5 +1,5 @@
 name: AceMagic S1 Panel
-version: "1.0.5"
+version: "1.0.6"
 slug: acemagic_s1
 description: Add-on for controlling AceMagic S1 TFT/LCD and LED strip with integrated web GUI
 url: "https://github.com/rlobanov/s1panel-ha-addon"
@@ -17,14 +17,15 @@ devices:
   - /dev/bus/usb/001/005  # The screen and LCDs
   - /dev/bus/usb/001/006  # The screen and LCDs 
   - /dev/bus/usb/001/007  # The screen and LCDs 
-map:
-  - sysfs:ro  # Для доступа к /sys/class/net (сетевые сенсоры)
-  - config:rw
+map: {}
+#  - sysfs:ro  # Для доступа к /sys/class/net (сетевые сенсоры)
+#  - config:rw
 privileged:
   - SYS_RAWIO  # Для доступа к аппаратным устройствам
   - SYS_ADMIN  # Для мониторинга системных ресурсов
 options: {}
 schema: {}
+
 
 
 
