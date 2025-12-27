@@ -37,7 +37,7 @@
       {
          "module": "sensors/network.js",
          "config": {
-            "interface": "enp4s0",
+            "interface": "enp2s0",
             "max_points": 60,
             "rate": 3000
          }
