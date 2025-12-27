@@ -1,5 +1,5 @@
 name: AceMagic S1 Panel
-version: "1.0.0"
+version: "1.0.1"
 slug: acemagic_s1
 description: Add-on for controlling AceMagic S1 TFT/LCD and LED strip with integrated web GUI
 url: "https://github.com/rlobanov/s1panel-ha-addon"  # Замените на URL вашего репозитория
@@ -21,4 +21,5 @@ privileged:
   - SYS_ADMIN  # Для мониторинга системных ресурсов
 options: {}
 schema: {}
+
 
