@@ -30,18 +30,3 @@ ports_description:
   8686/tcp: web interface
 options: {}
 schema: {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
