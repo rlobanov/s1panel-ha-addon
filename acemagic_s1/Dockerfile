@@ -2,7 +2,7 @@ FROM ghcr.io/home-assistant/amd64-base-debian:bookworm
 
 WORKDIR /app
 
-# Установка зависимостей (Node.js, libusb, шрифты для canvas, cairo/pango/jpeg для рендеринга)
+# РЈСЃС‚Р°РЅРѕРІРєР° Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№ (Node.js, libusb, С€СЂРёС„С‚С‹ РґР»СЏ canvas, cairo/pango/jpeg РґР»СЏ СЂРµРЅРґРµСЂРёРЅРіР°)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         nodejs \
@@ -18,13 +18,14 @@ RUN apt-get update && \
         build-essential && \
     rm -rf /var/lib/apt/lists/*
 
-# Копирование s1panel
+# РљРѕРїРёСЂРѕРІР°РЅРёРµ s1panel
 COPY s1panel /app
 
-# Установка npm-зависимостей
+# РЈСЃС‚Р°РЅРѕРІРєР° npm-Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№
 RUN npm install
+RUN cd gui && npm install && npm run build
 
-# Если есть gui, собрать (опционально)
+# Р•СЃР»Рё РµСЃС‚СЊ gui, СЃРѕР±СЂР°С‚СЊ (РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ)
 RUN if [ -d "gui" ]; then cd gui && npm install && npm run build; fi
 
 EXPOSE 8686
