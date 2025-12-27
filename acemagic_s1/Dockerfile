@@ -2,10 +2,9 @@ FROM ghcr.io/home-assistant/amd64-base-debian:bookworm
 
 WORKDIR /app
 
-# Установка зависимостей (Node.js, libusb, шрифты для canvas, cairo/pango/jpeg для рендеринга)
+# Установка системных зависимостей (Node.js уже в базовом образе HA, но добавляем необходимые библиотеки)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        nodejs \
         npm \
         libusb-1.0-0-dev \
         fonts-liberation \
@@ -15,18 +14,21 @@ RUN apt-get update && \
         libpango1.0-dev \
         libjpeg-dev \
         libgif-dev \
-        build-essential && \
+        build-essential \
     rm -rf /var/lib/apt/lists/*
 
-# Копирование s1panel
+# Копирование кода приложения
 COPY s1panel /app
 
-# Установка npm-зависимостей
+# Установка npm-зависимостей для основного приложения
 RUN npm install
-RUN cd gui && npm install && npm run build
 
-# Если есть gui, собрать (опционально)
-RUN if [ -d "gui" ]; then cd gui && npm install && npm run build; fi
+# Сборка GUI, если директория существует (Vite build выводит в gui/dist)
+RUN if [ -d "gui" ]; then \
+        cd gui && \
+        npm install && \
+        npm run build; \
+    fi
 
 EXPOSE 8686
 
