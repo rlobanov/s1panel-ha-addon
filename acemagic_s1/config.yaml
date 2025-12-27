@@ -15,8 +15,10 @@ devices:
   - /dev/bus/usb:/dev/bus/usb:rwm  # Для TFT через HID
 map:
   - sysfs:ro  # Для доступа к /sys/class/net (сетевые сенсоры)
+  - config:rw
 privileged:
   - SYS_RAWIO  # Для доступа к аппаратным устройствам
   - SYS_ADMIN  # Для мониторинга системных ресурсов
 options: {}
 schema: {}
+
