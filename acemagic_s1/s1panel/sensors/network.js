@@ -160,7 +160,7 @@ function init(config) {
     const _private = {
 
         max_points: config?.max_points || 300,
-        iface: config?.interface || 'enp2s0',
+        iface: config?.interface || 'enp4s0',
         history_rx_bytes: [],
         history_tx_bytes: [],
 
@@ -258,7 +258,7 @@ function settings() {
         ident: [ 'interface' ],   // which fields will change the identity of the sensor
         fields: [
             { name: 'max_points', type: 'number', value: 300 },
-            { name: 'interface', type: 'string', value: 'enp2s0' },
+            { name: 'interface', type: 'string', value: 'enp4s0' },
             { name: 'scaling', type: 'string', value: '1.5' }
         ]
     };
