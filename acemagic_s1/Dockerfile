@@ -25,14 +25,13 @@ COPY s1panel /app
 # Установка npm-зависимостей для основного приложения
 RUN npm install
 
-# Сборка GUI, если директория существует (Vite build выводит в gui/dist)
-RUN if [ -d "gui" ]; then \
-        cd gui && \
-        npm install && \
-        npm run build; \
-    fi
+RUN cd gui && \
+    npm install && \
+    npm run build && \
+    ls -la dist/  # Для отладки: проверит наличие файлов в логах сборки
 
 EXPOSE 8686
 
 CMD ["node", "main.js"]
+
 
