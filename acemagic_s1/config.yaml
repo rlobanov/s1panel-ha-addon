@@ -23,10 +23,13 @@ map:
 privileged:
   - SYS_RAWIO  # Для доступа к аппаратным устройствам
   - SYS_ADMIN  # Для мониторинга системных ресурсов
-  - ALL  # Временно для теста полного доступа
+  - NET_ADMIN
+  - SYS_TIME
+  - SYS_NICE
 ports:
   8686/tcp: 8686
 ports_description:
   8686/tcp: web interface
 options: {}
 schema: {}
+
