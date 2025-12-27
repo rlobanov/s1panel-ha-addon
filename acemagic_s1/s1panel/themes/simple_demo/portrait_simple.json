@@ -186,7 +186,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{17}",
                "refresh": 1000,
                "debug_frame": false,
@@ -450,7 +450,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{2}",
                "refresh": 1000,
                "debug_frame": false,
@@ -470,7 +470,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{1}",
                "refresh": 1000,
                "debug_frame": false,
@@ -511,7 +511,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{15}",
                "refresh": 1000,
                "debug_frame": false,
@@ -530,7 +530,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{5}",
                "refresh": 1000,
                "debug_frame": false,
@@ -550,7 +550,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{4}",
                "refresh": 1000,
                "debug_frame": false,
@@ -591,7 +591,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp4s0",
                "format": "{16}",
                "refresh": 1000,
                "debug_frame": false,
