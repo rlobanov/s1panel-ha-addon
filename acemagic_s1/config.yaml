@@ -14,6 +14,7 @@ panel_icon: mdi:monitor-dashboard
 devices:
   - /dev/ttyUSB0:/dev/ttyUSB0:rwm  # Для LED через CH340
   - /dev/bus/usb:/dev/bus/usb:rwm  # Для TFT через HID
+  - /dev/bus/usb/001/005  # The screen and LCDs 
 map:
   - sysfs:ro  # Для доступа к /sys/class/net (сетевые сенсоры)
   - config:rw
@@ -22,6 +23,7 @@ privileged:
   - SYS_ADMIN  # Для мониторинга системных ресурсов
 options: {}
 schema: {}
+
 
 
 
