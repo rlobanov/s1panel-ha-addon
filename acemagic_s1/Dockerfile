@@ -27,11 +27,11 @@ RUN npm install
 
 RUN cd gui && \
     npm install && \
-    npm run build && \
-    ls -la dist/  # Для отладки: проверит наличие файлов в логах сборки
+    npm run build
 
 EXPOSE 8686
 
 CMD ["node", "main.js"]
+
 
 
