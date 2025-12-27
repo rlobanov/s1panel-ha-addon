@@ -5,6 +5,7 @@ WORKDIR /app
 # Установка системных зависимостей (Node.js уже в базовом образе HA, но добавляем необходимые библиотеки)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+        nodejs \
         npm \
         libusb-1.0-0-dev \
         fonts-liberation \
@@ -14,8 +15,9 @@ RUN apt-get update && \
         libpango1.0-dev \
         libjpeg-dev \
         libgif-dev \
-        build-essential \
+        build-essential && \
     rm -rf /var/lib/apt/lists/*
+
 
 # Копирование кода приложения
 COPY s1panel /app
@@ -33,3 +35,4 @@ RUN if [ -d "gui" ]; then \
 EXPOSE 8686
 
 CMD ["node", "main.js"]
+
