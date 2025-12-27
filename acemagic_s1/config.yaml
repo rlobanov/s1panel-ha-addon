@@ -2,11 +2,12 @@ name: AceMagic S1 Panel
 version: "1.0.1"
 slug: acemagic_s1
 description: Add-on for controlling AceMagic S1 TFT/LCD and LED strip with integrated web GUI
-url: "https://github.com/rlobanov/s1panel-ha-addon"  # Замените на URL вашего репозитория
+url: "https://github.com/rlobanov/s1panel-ha-addon"
 arch:
   - amd64  # Если устройство x86-64; для других архитектур (например, arm64) добавьте соответствующий элемент
 startup: application
 boot: auto
+init: false
 ingress: true
 ingress_port: 8686  # Порт GUI; скорректируйте, если в s1panel используется другой (проверьте в index.js или config.json)
 panel_icon: mdi:monitor-dashboard
@@ -21,5 +22,6 @@ privileged:
   - SYS_ADMIN  # Для мониторинга системных ресурсов
 options: {}
 schema: {}
+
 
 
