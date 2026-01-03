@@ -1,5 +1,5 @@
 name: AceMagic S1 Panel
-version: "1.0.9"
+version: "0.0.9"
 slug: acemagic_s1
 description: Add-on for controlling AceMagic S1 TFT/LCD and LED strip with integrated web GUI
 url: "https://github.com/rlobanov/s1panel-ha-addon"
@@ -33,6 +33,7 @@ ports_description:
   8686/tcp: web interface
 options: {}
 schema: {}
+
 
 
 
