@@ -27,11 +27,13 @@ RUN npm install
 
 RUN cd gui && \
     npm install && \
-    npm run build
+    npm run build && \
+    rm -rf node_modules  # Очистка для уменьшения размера (опционально)
 
 EXPOSE 8686
 
 CMD ["node", "main.js"]
+
 
 
 
