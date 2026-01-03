@@ -607,6 +607,10 @@ function init_web_gui(state, config, theme) {
         const _port = Number(_listen[1]);
 
         _web.use(express.static(path.join(__dirname, 'gui/dist')));
+        _web.use((req, res, next) => {
+          logger.info(`Ingress request: ${req.method} ${req.url} from ${req.ip}`);
+          next();
+        });
         _web.use(express.json());
 
         api.init(_web, { state, config, theme });
