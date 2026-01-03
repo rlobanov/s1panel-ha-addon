@@ -8,7 +8,7 @@
          "background": "#000000",
          "duration": 60000,
          "led_config": {
-            "theme": 4,
+            "theme": 5,
             "intensity": 3,
             "speed": 3
          },
