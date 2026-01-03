@@ -123,31 +123,12 @@
             },
             {
                "id": 7,
-               "group": 3,
-               "name": "text",
-               "font": "17px Arial",
-               "color": "#878787",
-               "align": "center",
-               "rect": {
-                  "x": 59,
-                  "y": 290,
-                  "width": 53,
-                  "height": 21
-               },
-               "sensor": true,
-               "value": "cpu_power",
-               "format": "{0} W",
-               "refresh": 1000,
-               "debug_frame": false
-            },
-            {
-               "id": 8,
                "group": 1,
                "name": "text",
                "rect": {
                   "x": 0,
                   "y": 310,
-                  "width": 50,
+                  "width": 70,
                   "height": 10
                },
                "sensor": true,
