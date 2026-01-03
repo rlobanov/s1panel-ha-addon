@@ -24,7 +24,6 @@
 `http://<IP-вашего-HA>:8686/`
 
 ### Планы по разработке (To-Do)
-- [ ] Интеграция веб-интерфейса напрямую в боковую панель Home Assistant (поддержка Ingress).
 - [ ] Перенос настроек аддона в стандартную вкладку «Конфигурация» внутри страницы аддона в Home Assistant.
 - [ ] Добавление новых кастомных макетов для отображения сенсоров.
 - [ ] Тестирование.
@@ -51,7 +50,6 @@ Currently, the Web UI for configuration is available at:
 `http://<your-ha-ip>:8686/`
 
 ### Roadmap / To-Do
-- [ ] Implement native Home Assistant Sidebar integration (Ingress support).
 - [ ] Move add-on configuration to the native Home Assistant "Configuration" tab.
 - [ ] Add more customizable sensor layouts.
 - [ ] Conduct stability testing.
