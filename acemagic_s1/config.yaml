@@ -4,41 +4,31 @@ slug: acemagic_s1
 description: Add-on for controlling AceMagic S1 TFT/LCD and LED strip with integrated web GUI
 url: "https://github.com/rlobanov/s1panel-ha-addon"
 arch:
-  - amd64  # Если устройство x86-64; для других архитектур (например, arm64) добавьте соответствующий элемент
+  - amd64
 startup: application
 boot: auto
 init: false
 ingress: true
-ingress_port: 8686  # Порт GUI; скорректируйте, если в s1panel используется другой (проверьте в index.js или config.json)
+ingress_port: 8686
 panel_icon: mdi:monitor-dashboard
 devices:
-  - /dev/ttyUSB0:/dev/ttyUSB0:rwm  # Для LED через CH340
-  - /dev/bus/usb:/dev/bus/usb:rwm  # Для TFT через HID
-  - /dev/bus/usb/001/005  # The screen and LCDs
-  - /dev/bus/usb/001/006  # The screen and LCDs 
-  - /dev/bus/usb/001/007  # The screen and LCDs 
+  - /dev/ttyUSB0:/dev/ttyUSB0:rwm
+  - /dev/bus/usb:/dev/bus/usb:rwm
+  - /dev/bus/usb/001/005
+  - /dev/bus/usb/001/006
+  - /dev/bus/usb/001/007
 map:
-#  - sysfs:ro  # Для доступа к /sys/class/net (сетевые сенсоры)
   - config:rw
-host_network: true
 uart: true
 usb: true
-gpio: true
-audio: true
-apparmor: false
-host_dbus: true
-docker_api: true
+#apparmor: false  # Тест без этого, если возможно
 privileged:
-  - SYS_RAWIO  # Для доступа к аппаратным устройствам
-  - SYS_ADMIN  # Для мониторинга системных ресурсов
-  - NET_ADMIN
-  - SYS_TIME
-  - SYS_NICE
+  - SYS_RAWIO
+  - SYS_ADMIN
+  - NET_ADMIN  # Для сетевого мониторинга
 ports:
   8686/tcp: 8686
 ports_description:
   8686/tcp: web interface
 options: {}
 schema: {}
-
-
